@@ -19,7 +19,7 @@ class Database
             exit;
         }
         $db->set_charset(DB_CHARSET);
-        $db->query("SET collation_connection = ".DB_COLLATION);
+        $db->query("SET collation_connection = " . DB_COLLATION);
 
         return $db;
     }

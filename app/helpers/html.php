@@ -6,6 +6,7 @@
  * @param   string $value The string to be escaped
  * @return  string
  */
+
 if (!function_exists('e')) {
     function e($value)
     {

@@ -1,5 +1,5 @@
 <?php
-defined('FIR') OR exit();
+defined('FIR') or exit();
 /**
  * The template for displaying the header section
  */
@@ -25,7 +25,7 @@ defined('FIR') OR exit();
                         <?=mb_strtoupper(mb_substr($data['language'], 0, 2))?>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right text-capitalize" aria-labelledby="dropdownMenuButton">
-                        <?php foreach($data['languages_list'] as $language): ?>
+                        <?php foreach ($data['languages_list'] as $language) : ?>
                             <a class="dropdown-item" href="<?=$this->siteUrl()?>/lang/<?=$language?>"><?=$language?></a>
                         <?php endforeach ?>
                     </div>

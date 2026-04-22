@@ -1,5 +1,5 @@
 <?php
-defined('FIR') OR exit();
+defined('FIR') or exit();
 /**
  * The main template file
  * This file puts together the three main section of the software, header, content and footer
@@ -15,11 +15,11 @@ defined('FIR') OR exit();
 
     <link href="<?=$this->siteUrl()?>/<?=$this->publicPath()?>/<?=$this->themePath()?>/assets/images/favicon.png" rel="icon">
 
-    <?php foreach(['bootstrap.min', 'style'] as $css): ?>
+    <?php foreach (['bootstrap.min', 'style'] as $css) : ?>
         <link href="<?=$this->siteUrl()?>/<?=$this->themePath()?>/assets/css/<?=$css?>.css" rel="stylesheet" type="text/css">
     <?php endforeach ?>
 
-    <?php foreach(['jquery', 'bootstrap.bundle.min', 'functions'] as $js): ?>
+    <?php foreach (['jquery', 'bootstrap.bundle.min', 'functions'] as $js) : ?>
         <script type="text/javascript" src="<?=$this->siteUrl()?>/<?=$this->themePath()?>/assets/js/<?=$js?>.js"></script>
     <?php endforeach ?>
 </head>

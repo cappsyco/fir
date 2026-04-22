@@ -109,7 +109,12 @@ class Controller
         $data['content_view'] = $data['content'];
         $data['footer_view'] = $this->getFooter();
         if (isAjax()) {
-            echo json_encode(['title' => $this->view->docTitle(), 'header' => $data['header_view'], 'content' => $data['content_view'], 'footer' => $data['footer_view']]);
+            echo json_encode([
+                'title' => $this->view->docTitle(),
+                'header' => $data['header_view'],
+                'content' => $data['content_view'],
+                'footer' => $data['footer_view']
+            ]);
         } else {
             echo $this->view->render($data, 'wrapper');
         }

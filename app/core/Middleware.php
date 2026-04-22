@@ -44,7 +44,7 @@ class Middleware
 
             $class = 'Fir\Middleware\\' . $name;
 
-            new $class;
+            new $class();
         }
     }
 

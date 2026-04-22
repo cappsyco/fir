@@ -9,7 +9,6 @@ use Fir\Languages\Language as Language;
  */
 class CsrfToken
 {
-
     public function __construct()
     {
         $this->generateToken();
@@ -24,7 +23,14 @@ class CsrfToken
         // If there isn't any sessions set, or if the session is empty
         if (!isset($_SESSION['token_id']) || empty($_SESSION['token_id'])) {
             // Generate a random session token
-            $token_id = hash('sha256', substr(str_shuffle('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 10));
+            $token_id = hash(
+                'sha256',
+                substr(
+                    str_shuffle('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'),
+                    0,
+                    10
+                )
+            );
 
             // Store the token in the session
             $_SESSION['token_id'] = $token_id;

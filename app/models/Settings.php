@@ -11,7 +11,7 @@ class Settings extends Model
      */
     public function get()
     {
-        $query = $this->db->prepare("SELECT * FROM `".DB_PREFIX."settings`");
+        $query = $this->db->prepare("SELECT * FROM `" . DB_PREFIX . "settings`");
         $query->execute();
         $result = $query->get_result();
         $query->close();

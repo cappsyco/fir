@@ -1,5 +1,6 @@
 <?php
-defined('FIR') OR exit();
+
+defined('FIR') or exit();
 /**
  * The template for displaying Home page content
  */
